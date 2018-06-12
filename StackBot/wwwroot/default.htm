@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Stack Bot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A simple bot to help find relevant question on Stack Overflow.">
+    <meta name="author" content="Armando Garza">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <div class="container">
+        <div class="jumbotron">
+            <div class="d-flex justify-content-end">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Documentation</a>
+                <span class="nav-link"> | </span>
+                <a class="nav-link" href="#">Terms of Use</a>
+            </div>
+            <br />
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <header>
+                            <hgroup>
+                                <h1>StackBot</h1>
+                                <h4>A simple Microsoft Bot written using ASP.Net Core 2</h4>
+                            </hgroup>
+                        </header>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/logo.png" width="150" alt="StackBot Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="feature">
+                        <h3><i class="fa fa-play"></i> Getting Started</h3>
+                        <p>Visit <a href="https://www.botframework.com/">Bot Framework</a> to register your bot. When you register, remember to set the endpoint to:</p>
+                        <div>
+                            https://<strong>{your domain name}</strong>/api/messages
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="feature">
+                        <h3><i class="fa fa-bug"></i> Debuging</h3>
+                        <p>To debug you bot using the Bot Framework Emulator, paste this URL into the Emulator window:</p>
+                        <div id="botBaseUrl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script>
+        var urlDiv = document.getElementById("botBaseUrl");
+        var aTag = document.createElement('a');
+        aTag.setAttribute('href', location.protocol + "//" + location.host + "/api/messages");
+        aTag.innerHTML = location.protocol + "//" + location.host + "/api/messages";
+        urlDiv.appendChild(aTag);
+    </script>
+</body>
+</html>
